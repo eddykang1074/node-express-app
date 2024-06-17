@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 등록 웹페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h3>게시글 등록 웹페이지</h1>
+            <form action="/article/create" method="post" id="articleForm">
+                <div class="row mb-3">
+                    <label for="title" class="form-label">제목</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="글제목">
+                </div>
+                <div class="row mb-3">
+                    <label for="content" class="form-label">내용</label>
+                    <textarea class="form-control" id="content" name="content" rows="10"></textarea>
+                </div>
+                <div class="row mb-3">
+                    <label for="display_yn" class="form-label">게시여부</label>
+                    <select class="form-select" id="display_yn" name="display_yn">
+                        <option value="0" >게시안함</option>
+                        <option value="1" selected>게시함</option>
+                    </select>
+                </div>
+                <div class="row mb-3">
+                    <label for="regist_user_name" class="form-label">작성자</label>
+                    <input type="text" class="form-control" id="regist_user_name" name="regist_user_name" placeholder="작성자명">
+                </div>
+                <div class="d-grid gap-2 d-md-block text-center">
+                    <button type="submit" class="btn btn-primary">등록</button>
+                    <a href="/article/list"  class="btn btn-secondary">목록</a>
+                </div>
+            </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
